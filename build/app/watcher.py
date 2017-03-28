@@ -90,7 +90,6 @@ def scheduled_task():
 
                     # reboot the container
                     logger.info('Rebooting container')
-                    print(rc)
                     rancher.restart_container(rc['id'])
                     rancher.wait_for_container(rc['id'],'running')
             else:
